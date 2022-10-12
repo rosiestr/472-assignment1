@@ -65,6 +65,23 @@ print(grid_search.score(X_test, y_test))
 
 
 #Top-DT ~ 2.3.5
+tdt = DecisionTreeClassifier()
 
+#will have to check what these parameters do and how to comment on them 
+
+params_dt = {
+    "criterion" : ['entropy'],
+    "max_depth" : [2, 10],
+    "min_samples_split" : [1.0, 5, 100]
+}
+
+dt_grid = GridSearchCV(
+    estimator=tdt,
+    param_grid= params_dt
+)
+
+dt_grid = dt_grid.fit(X_train, y_train)
+print("TOP-DT: ")
+print(dt_grid.score(X_test, y_test))
 
 #Top-MLP ~ 2.3.6
