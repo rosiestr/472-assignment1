@@ -17,16 +17,19 @@ with gzip.open(jsonfiledirectory, "r") as f:
 #2.1
 strings = []
 sentiment = []
+emotions =[]
 for item in data:
     strings.append(item[0])
     sentiment.append(item[2])
+    emotions.append(item[1])
 
 vectorizer = CountVectorizer()
 # tokenize and build vocab
 v_fit = vectorizer.fit_transform(strings)
 
 #2.2
-X_train, X_test, y_train, y_test = train_test_split(v_fit, sentiment, test_size=0.2)
+#X_train, X_test, y_train, y_test = train_test_split(v_fit, sentiment, test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(v_fit, emotions, test_size=0.2)
 
 #2.3
 #Base-MNP ~ 2.3.1
