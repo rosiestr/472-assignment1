@@ -1,5 +1,7 @@
 # 472-assignment1 Instructions
 
+https://github.com/rosiestr/472-assignment1.git
+
 ### Part 1: Dataset Preparation and Analysis
 Step 1: Open the Jupyter notebook called "1.Prep_and_Analysis.ipynb"
 
@@ -59,7 +61,7 @@ Step 18: Remaining code blocks pertain to section 2.5. Run each block of code in
 
   
 ### Part 3: Embeddings as Features
-
+Step 1: Open the Jupyter notebook called "word2vec_embeddings.ipynb"
 Step 1: Run the first block of code with the heading 3.1 to load the word2vec model
 
 Step 2: Replace the jsonfiledirectory with the full path to goemotions.json.gz file in your computer in the second block of code
